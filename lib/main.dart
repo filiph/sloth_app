@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:performance_test_app/src/black.dart';
 import 'package:performance_test_app/src/blue.dart';
 import 'package:performance_test_app/src/brown.dart';
 import 'package:performance_test_app/src/gray.dart';
@@ -57,6 +58,9 @@ class MyHomePage extends StatelessWidget {
           LightGrayPage(),
           GrayPage(),
           LimePage(),
+          LightGrayPage(),
+          GrayPage(),
+          BlackPage(),
           LightGrayPage(),
           GrayPage(),
           // Clipping
