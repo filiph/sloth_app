@@ -54,6 +54,9 @@ class MyHomePage extends StatelessWidget {
           BrownPage(),
           LightGrayPage(),
           GrayPage(),
+          PurplePage(),
+          LightGrayPage(),
+          GrayPage(),
           IndigoPage(),
           LightGrayPage(),
           GrayPage(),
@@ -61,10 +64,6 @@ class MyHomePage extends StatelessWidget {
           LightGrayPage(),
           GrayPage(),
           BlackPage(),
-          LightGrayPage(),
-          GrayPage(),
-          // Clipping
-          PurplePage(),
         ],
       ),
     );

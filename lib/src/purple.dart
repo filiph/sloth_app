@@ -21,6 +21,8 @@ class PurplePage extends StatelessWidget {
           ),
           elevation: 18,
           child: ListView(
+            padding: const EdgeInsets.all(16),
+            itemExtent: 30,
             children: [
               for (var line in loremIpsum) Text(line),
             ],
