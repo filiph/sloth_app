@@ -9,7 +9,7 @@ class BluePage extends StatelessWidget {
       color: Colors.blue,
       child: ListView(
         children: [
-          for (var i = 0; i < 1000; i++) _buildLineWidget(i),
+          for (var i = 0; i < 10000; i++) _buildLineWidget(i),
         ],
       ),
     );

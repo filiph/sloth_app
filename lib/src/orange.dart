@@ -8,6 +8,7 @@ class OrangePage extends StatelessWidget {
     return MyRoundedCard(
       color: Colors.orange,
       child: ListView(
+        addRepaintBoundaries: false,
         children: [
           for (var line in loremIpsum) PictureLine(line),
         ],

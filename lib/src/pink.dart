@@ -16,7 +16,7 @@ class _PinkPageState extends State<PinkPage> {
       child: Column(
         children: <Widget>[
           FlatButton(
-            onPressed: () => _compute(),
+            onPressed: _compute,
             child: Text('COMPUTE', style: TextStyle(color: Colors.white)),
             color: Colors.pink,
           ),
