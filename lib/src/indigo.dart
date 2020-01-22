@@ -50,34 +50,35 @@ class _IndigoPageState extends State<IndigoPage>
               builder: (context, child) {
                 return Transform.rotate(
                   angle: _rotation.value,
-                  child: Stack(
-                    children: [
-                      ListView(
-                        itemExtent: 40,
-                        children: <Widget>[
-                          for (var i = 0; i < 100; i++)
-                            Padding(
-                              padding: const EdgeInsets.symmetric(
-                                  horizontal: 18, vertical: 6),
-                              child: Text('Item #$i'),
-                            ),
-                        ],
-                      ),
-                      ClipRect(
-                        child: BackdropFilter(
-                          filter: ImageFilter.blur(
-                            sigmaX: 2,
-                            sigmaY: 2,
-                          ),
-                          child: Container(
-                            color: Colors.black.withOpacity(0),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
+                  child: child,
                 );
               },
+              child: Stack(
+                children: [
+                  ListView(
+                    itemExtent: 40,
+                    children: <Widget>[
+                      for (var i = 0; i < 100; i++)
+                        Padding(
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 18, vertical: 6),
+                          child: Text('Item #$i'),
+                        ),
+                    ],
+                  ),
+                  ClipRect(
+                    child: BackdropFilter(
+                      filter: ImageFilter.blur(
+                        sigmaX: 2,
+                        sigmaY: 2,
+                      ),
+                      child: Container(
+                        color: Colors.black.withOpacity(0),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ],
