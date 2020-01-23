@@ -19,9 +19,11 @@ class OrangePage extends StatelessWidget {
 
 class PictureLine extends StatelessWidget {
   static const List<String> _pictures = [
-    'assets/filip_happy.jpg',
-    'assets/filip_normal.jpg',
-    'assets/filip_unhappy.jpg',
+    'assets/filip1.jpg',
+    'assets/filip2.jpg',
+    'assets/filip3.jpg',
+    'assets/filip4.jpg',
+    'assets/filip5.jpg',
   ];
 
   final String line;
