@@ -8,7 +8,6 @@ import 'package:performance_test_app/src/indigo.dart';
 import 'package:performance_test_app/src/lime.dart';
 import 'package:performance_test_app/src/orange.dart';
 import 'package:performance_test_app/src/pink.dart';
-import 'package:performance_test_app/src/purple.dart';
 import 'package:performance_test_app/src/welcome.dart';
 import 'package:performance_test_app/src/yellow.dart';
 
@@ -52,9 +51,9 @@ class MyHomePage extends StatelessWidget {
           LightGrayPage(),
           GrayPage(),
           BrownPage(),
-          LightGrayPage(),
-          GrayPage(),
-          PurplePage(),
+          // LightGrayPage(),
+          // GrayPage(),
+          // PurplePage(),
           LightGrayPage(),
           GrayPage(),
           IndigoPage(),
