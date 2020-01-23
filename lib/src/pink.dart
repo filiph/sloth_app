@@ -16,7 +16,7 @@ class _PinkPageState extends State<PinkPage> {
       child: Column(
         children: <Widget>[
           FlatButton(
-            onPressed: _compute,
+            onPressed: _startComputation,
             child: Text('COMPUTE', style: TextStyle(color: Colors.white)),
             color: Colors.pink,
           ),
@@ -34,7 +34,7 @@ class _PinkPageState extends State<PinkPage> {
     );
   }
 
-  Future<void> _compute() async {
+  Future<void> _startComputation() async {
     setState(() {
       _result = null;
     });
