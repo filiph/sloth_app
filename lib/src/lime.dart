@@ -53,7 +53,10 @@ class _LogViewerState extends State<LogViewer> {
     return ListView.builder(
       itemExtent: 20,
       itemCount: logging?.logs?.length ?? 0,
-      itemBuilder: (context, index) => Text(logging.logs[index]),
+      itemBuilder: (context, index) => Text(
+        logging.logs[index],
+        key: ValueKey(logging.logs[index]),
+      ),
     );
   }
 
