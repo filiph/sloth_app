@@ -201,11 +201,11 @@ class _TimeStamp {
 
   String meridiem;
 
-  DateFormat currentTime = DateFormat('h:mm:ss', 'en_US');
+  static DateFormat currentTime = DateFormat('h:mm:ss', 'en_US');
 
-  DateFormat currentDate = DateFormat('EEEE, MMM d', 'en_US');
+  static DateFormat currentDate = DateFormat('EEEE, MMM d', 'en_US');
 
-  DateFormat currentMeridiem = DateFormat('aaa', 'en_US');
+  static DateFormat currentMeridiem = DateFormat('aaa', 'en_US');
 
   _TimeStamp()
       : time = '',

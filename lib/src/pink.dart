@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:performance_test_app/src/rounded_card.dart';
 
@@ -39,7 +40,7 @@ class _PinkPageState extends State<PinkPage> {
       _result = null;
     });
     await Future.delayed(const Duration(milliseconds: 200));
-    var result = _fibonacci(BigInt.from(32));
+    var result = await compute( _fibonacci, BigInt.from(32));
     await Future.delayed(const Duration(milliseconds: 200));
     setState(() {
       _result = result;

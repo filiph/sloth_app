@@ -46,20 +46,21 @@ class _GreenPageState extends State<GreenPage>
           Expanded(
             child: AnimatedBuilder(
               animation: _rotation,
+              child: ListView(
+                itemExtent: 40,
+                children: <Widget>[
+                  for (var i = 0; i < 20000; i++)
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 18, vertical: 6),
+                      child: Text('Item #$i'),
+                    ),
+                ],
+              ),
               builder: (context, child) {
                 return Transform.rotate(
                   angle: _rotation.value,
-                  child: ListView(
-                    itemExtent: 40,
-                    children: <Widget>[
-                      for (var i = 0; i < 20000; i++)
-                        Padding(
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 18, vertical: 6),
-                          child: Text('Item #$i'),
-                        ),
-                    ],
-                  ),
+                  child: child,
                 );
               },
             ),
