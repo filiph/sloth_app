@@ -18,12 +18,13 @@ import 'package:performance_test_app/src/yellow.dart';
 void main() {
   // Just something to have in the networking tab.
   HttpClient client = HttpClient();
+  final responses = <int>{};
   Timer.periodic(const Duration(seconds: 10), (_) async {
     var request = await client.getUrl(
       Uri.parse("http://www.example.com/"),
     );
     var response = await request.close();
-    print(response.statusCode);
+    responses.add(response.statusCode);
   });
 
   runApp(MyApp());
