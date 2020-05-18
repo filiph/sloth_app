@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:performance_test_app/src/amber.dart';
 import 'package:performance_test_app/src/black.dart';
 import 'package:performance_test_app/src/blue.dart';
 import 'package:performance_test_app/src/brown.dart';
@@ -35,13 +36,16 @@ class MyHomePage extends StatelessWidget {
           WelcomePage(),
           LightGrayPage(),
           GrayPage(),
-          BluePage(),
+          AmberPage(),
           LightGrayPage(),
           GrayPage(),
           YellowPage(),
           LightGrayPage(),
           GrayPage(),
           GreenPage(),
+          LightGrayPage(),
+          GrayPage(),
+          BluePage(),
           LightGrayPage(),
           GrayPage(),
           OrangePage(),
