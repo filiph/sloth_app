@@ -8,10 +8,10 @@ class YellowPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return MyRoundedCard(
       color: Colors.yellow,
-      child: ListView(
-        children: [
-          for (var line in loremIpsum) ItemLine(name: line),
-        ],
+      child: ListView.builder(
+        itemBuilder: (context, index) {
+          return ItemLine(name: loremIpsum[index % loremIpsum.length]);
+        },
       ),
     );
   }
