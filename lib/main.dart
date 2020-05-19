@@ -6,6 +6,7 @@ import 'package:performance_test_app/src/amber.dart';
 import 'package:performance_test_app/src/black.dart';
 import 'package:performance_test_app/src/blue.dart';
 import 'package:performance_test_app/src/brown.dart';
+import 'package:performance_test_app/src/cyan.dart';
 import 'package:performance_test_app/src/gray.dart';
 import 'package:performance_test_app/src/green.dart';
 import 'package:performance_test_app/src/indigo.dart';
@@ -55,7 +56,7 @@ class MyHomePage extends StatelessWidget {
           AmberPage(),
           LightGrayPage(),
           GrayPage(),
-          GreenPage(),
+          CyanPage(),
           LightGrayPage(),
           GrayPage(),
           YellowPage(),
@@ -64,6 +65,9 @@ class MyHomePage extends StatelessWidget {
           BluePage(),
           LightGrayPage(),
           GrayPage(),
+          LightGrayPage(),
+          GrayPage(),
+          GreenPage(),
           OrangePage(),
           LightGrayPage(),
           GrayPage(),
