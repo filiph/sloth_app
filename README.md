@@ -1,21 +1,32 @@
-# performance_test_app
+# sloth_app
 
-A new Flutter application.
+An intentionally slow Flutter app.
 
-## Getting Started
+![The sloth_app in action, showing two pages with Performance Overlay turned on](https://user-images.githubusercontent.com/919717/91081239-a79f2c00-e5fb-11ea-9888-15b52789aa77.gif)
 
-This project is a starting point for a Flutter application.
+## But, why?
 
-A few resources to get you started if this is your first Flutter project:
+Performance optimization is a gnarly topic. Performance issues seldom exist in isolation, and they
+often only manifest in really complex (and closed-source) apps.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+I ([filiph@](https://filiph.net)) made this app to address this. It's full of performance issues
+we see in real-world apps, but without the cruft of full apps, and isolated from each other.
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+It has been a great resource to me and others when teaching about Flutter performance.
 
-## Videos
+### Videos
 
-- [Flutter Europe](https://www.youtube.com/watch?v=SQcmrl_NkqY)
+The app makes appearance in the following videos:
+
+- [Flutter Europe 2020](https://www.youtube.com/watch?v=SQcmrl_NkqY)
 - [Meetup Online Presentation](https://www.youtube.com/watch?v=Ogq8QFp9Ea8)
+- [Flutter Day 2020 DevTools session](https://www.youtube.com/watch?v=nq43mP7hjAE)
+
+## Structure
+
+The app is structured as one big `PageView` that goes from left to right. Every 3rd page
+has a performance issue. The other two are there to cleanly isolate one performance
+issue from another (unless I _don't_ want to isolate).
+
+Pages are color-coded, so that there's a simple correspondence between what you see and the code.
+For example, the code to the blue page is found in `blue.dart`.
