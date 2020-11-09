@@ -30,8 +30,4 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/angry_4k.jpg
-    - assets/blissful_4k.jpg
-    - assets/happy_4k.jpg
-    - assets/pleased_4k.jpg
-    - assets/suspicious_4k.jpg
+    - assets/
