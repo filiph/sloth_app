@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'dart:developer' as developer;
 import 'dart:io';
 
 import 'package:flutter/material.dart';
@@ -18,24 +17,15 @@ import 'package:performance_test_app/src/welcome.dart';
 import 'package:performance_test_app/src/yellow.dart';
 
 void main() {
-  // Just something to have in the networking tab and logging tab.
+  // Just something to have in the networking tab.
   HttpClient client = HttpClient();
+  final responses = <int>{};
   Timer.periodic(const Duration(seconds: 10), (_) async {
-    const networkLoggerName = 'my_network_log';
-    developer.log('Sending request to example.com.', name: networkLoggerName);
     var request = await client.getUrl(
-      Uri.parse('http://www.example.com/'),
+      Uri.parse("http://www.example.com/"),
     );
     var response = await request.close();
-    developer.log(
-      'Response from example.com received (HTTP ${response.statusCode}).',
-      name: networkLoggerName,
-      error: '{"contentLength": ${response.contentLength}}',
-    );
-  });
-
-  Timer.periodic(const Duration(seconds: 9), (_) {
-    print('Regular print() message.');
+    responses.add(response.statusCode);
   });
 
   runApp(MyApp());
