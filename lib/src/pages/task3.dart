@@ -1,25 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:performance_test_app/src/rounded_card.dart';
 
-class PinkPage extends StatefulWidget {
+class Task3Page extends StatefulWidget {
   @override
-  _PinkPageState createState() => _PinkPageState();
+  _Task3PageState createState() => _Task3PageState();
 }
 
-class _PinkPageState extends State<PinkPage> {
+class _Task3PageState extends State<Task3Page> {
   BigInt _result = BigInt.zero;
 
   @override
   Widget build(BuildContext context) {
     return MyRoundedCard(
       title: 'Task 3',
-      color: Colors.pink,
+      color: Colors.orange,
       child: Column(
         children: <Widget>[
           FlatButton(
             onPressed: _startComputation,
             child: Text('COMPUTE', style: TextStyle(color: Colors.white)),
-            color: Colors.pink,
+            color: Colors.deepOrange,
           ),
           SizedBox(height: 100),
           Text('Result'),

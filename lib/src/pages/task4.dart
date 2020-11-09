@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:performance_test_app/src/lorem_ipsum.dart';
 import 'package:performance_test_app/src/rounded_card.dart';
 
-class OrangePage extends StatelessWidget {
+class Task4Page extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MyRoundedCard(
       title: 'Task 4',
-      color: Colors.orange,
+      color: Colors.purple,
       child: ListView(
         addRepaintBoundaries: false,
         children: [

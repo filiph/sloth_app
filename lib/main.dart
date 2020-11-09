@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:performance_test_app/src/cyan.dart';
-import 'package:performance_test_app/src/gray.dart';
-import 'package:performance_test_app/src/orange.dart';
-import 'package:performance_test_app/src/pink.dart';
+import 'package:performance_test_app/src/pages/task1.dart';
+import 'package:performance_test_app/src/pages/task2.dart';
+import 'package:performance_test_app/src/pages/task3.dart';
+import 'package:performance_test_app/src/pages/task4.dart';
 import 'package:performance_test_app/src/welcome.dart';
-import 'package:performance_test_app/src/yellow.dart';
 
 void main() {
   runApp(MyApp());
@@ -27,19 +26,49 @@ class MyHomePage extends StatelessWidget {
       body: PageView(
         children: [
           WelcomePage(),
-          LightGrayPage(),
-          GrayPage(),
-          CyanPage(),
-          LightGrayPage(),
-          GrayPage(),
-          YellowPage(),
-          LightGrayPage(),
-          GrayPage(),
-          PinkPage(),
-          LightGrayPage(),
-          GrayPage(),
-          OrangePage(),
+          _Separator1Page(),
+          _Separator2Page(),
+          Task1Page(),
+          _Separator1Page(),
+          _Separator2Page(),
+          Task2Page(),
+          _Separator1Page(),
+          _Separator2Page(),
+          Task3Page(),
+          _Separator1Page(),
+          _Separator2Page(),
+          Task4Page(),
         ],
+      ),
+    );
+  }
+}
+
+class _Separator1Page extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+          colors: [Colors.black12, Colors.grey],
+        ),
+      ),
+    );
+  }
+}
+
+class _Separator2Page extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+          colors: [Colors.blueAccent, Colors.blueGrey],
+        ),
       ),
     );
   }

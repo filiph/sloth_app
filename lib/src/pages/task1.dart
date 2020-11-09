@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:performance_test_app/src/lorem_ipsum.dart';
 import 'package:performance_test_app/src/rounded_card.dart';
 
-class CyanPage extends StatelessWidget {
+class Task1Page extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MyRoundedCard(
       title: 'Task 1',
-      color: Colors.cyan,
+      color: Colors.blue,
       child: ListView.builder(
         itemBuilder: (context, index) {
           if (index == 42) return MyExpensiveWidget();
