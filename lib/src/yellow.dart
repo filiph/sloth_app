@@ -7,6 +7,7 @@ class YellowPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MyRoundedCard(
+      title: 'Task 2',
       color: Colors.yellow,
       child: ListView.builder(
         itemBuilder: (context, index) {

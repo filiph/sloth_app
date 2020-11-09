@@ -12,6 +12,7 @@ class _PinkPageState extends State<PinkPage> {
   @override
   Widget build(BuildContext context) {
     return MyRoundedCard(
+      title: 'Task 3',
       color: Colors.pink,
       child: Column(
         children: <Widget>[

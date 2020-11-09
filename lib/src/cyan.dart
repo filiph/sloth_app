@@ -6,6 +6,7 @@ class CyanPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MyRoundedCard(
+      title: 'Task 1',
       color: Colors.cyan,
       child: ListView.builder(
         itemBuilder: (context, index) {

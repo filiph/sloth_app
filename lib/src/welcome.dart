@@ -17,6 +17,17 @@ class WelcomePage extends StatelessWidget {
                 fontSize: 50,
               ),
             ),
+            SizedBox(height: 50),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  'This way',
+                  style: TextStyle(color: Colors.white, fontSize: 22),
+                ),
+                Icon(Icons.arrow_right_alt, color: Colors.white),
+              ],
+            ),
           ],
         ),
       ),
