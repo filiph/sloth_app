@@ -52,7 +52,6 @@ class ItemLine extends StatelessWidget {
   }
 
   static String _makeSubtitle(String title) {
-    // TODO: Maybe trace this?
     var noPunctuation = title.replaceAll('.', '').replaceAll(',', '');
     var upper = noPunctuation.toUpperCase();
     var reversed = String.fromCharCodes(upper.runes.toList().reversed);

@@ -10,32 +10,28 @@ class Task1Page extends StatelessWidget {
       color: Colors.blue,
       child: ListView.builder(
         itemBuilder: (context, index) {
-          if (index == 42) return MyExpensiveWidget();
-          return MyNormalWidget(index);
+          return MyLineWidget(index);
         },
       ),
     );
   }
 }
 
-class MyExpensiveWidget extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Stack(
-      children: <Widget>[
-        for (int i = 0; i < 100; i++) MyNormalWidget(42),
-      ],
-    );
-  }
-}
-
-class MyNormalWidget extends StatelessWidget {
+class MyLineWidget extends StatelessWidget {
   final int index;
 
-  MyNormalWidget(this.index, {Key key}) : super(key: key);
+  MyLineWidget(this.index, {Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    if (index == 42) {
+      return Stack(
+        children: <Widget>[
+          for (int i = 0; i < 100; i++) MyLineWidget(-1),
+        ],
+      );
+    }
+
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
