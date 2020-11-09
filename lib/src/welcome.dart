@@ -4,24 +4,15 @@ class WelcomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Color(0xFFFDD29D),
+      color: Colors.green,
       child: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            SizedBox(
-              height: 300,
-              child: Image.asset(
-                'assets/sloth.png',
-                width: 436,
-                height: 464,
-              ),
-            ),
-            SizedBox(height: 70),
             Text(
-              'Sloth App',
+              'Perf Study',
               style: TextStyle(
-                color: Colors.red,
+                color: Colors.white,
                 fontWeight: FontWeight.w900,
                 fontSize: 50,
               ),
