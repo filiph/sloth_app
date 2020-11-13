@@ -55,6 +55,7 @@ class _Separator1Page extends StatelessWidget {
           colors: [Colors.black12, Colors.grey],
         ),
       ),
+      child: _SeparatorSign('Keep going'),
     );
   }
 }
@@ -69,6 +70,29 @@ class _Separator2Page extends StatelessWidget {
           end: Alignment.bottomRight,
           colors: [Colors.blueAccent, Colors.blueGrey],
         ),
+      ),
+      child: _SeparatorSign('Almost there'),
+    );
+  }
+}
+
+class _SeparatorSign extends StatelessWidget {
+  final String text;
+
+  const _SeparatorSign(this.text);
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+            text,
+            style: TextStyle(color: Colors.white, fontSize: 22),
+          ),
+          Icon(Icons.arrow_right_alt, color: Colors.white),
+        ],
       ),
     );
   }
