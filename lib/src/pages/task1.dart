@@ -25,11 +25,7 @@ class MyLineWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     if (index == 42) {
-      return Stack(
-        children: <Widget>[
-          for (int i = 0; i < 100; i++) MyLineWidget(-1),
-        ],
-      );
+      return _MyLineStack();
     }
 
     return Row(
@@ -61,6 +57,17 @@ class MyLineWidget extends StatelessWidget {
             ],
           ),
         ),
+      ],
+    );
+  }
+}
+
+class _MyLineStack extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
+      children: <Widget>[
+        for (int i = 0; i < 100; i++) MyLineWidget(-1),
       ],
     );
   }
