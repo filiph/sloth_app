@@ -56,8 +56,9 @@ class ItemLine extends StatelessWidget {
     var upper = noPunctuation.toUpperCase();
     var reversed = String.fromCharCodes(upper.runes.toList().reversed);
     var appended = '$reversed '
-        '(${_fibonacci(reversed.hashCode % 40)}, '
-        '${_fibonacci((reversed.hashCode + 1) % 40)})';
+        '(${_fibonacci(title.hashCode % 35)}, '
+        '${_fibonacci(reversed.hashCode % 35)}, '
+        '${_fibonacci((reversed.hashCode + 1) % 35)})';
     return appended;
   }
 }
