@@ -9,10 +9,34 @@ class Task4Page extends StatelessWidget {
       title: 'Task 4',
       color: Colors.purple,
       child: ListView(
-        addRepaintBoundaries: false,
         children: [
           for (var line in loremIpsum) PictureLine(line),
         ],
+      ),
+    );
+  }
+}
+
+class Task4Warning extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          begin: Alignment.bottomLeft,
+          end: Alignment.topRight,
+          colors: [Colors.indigo, Colors.purple],
+        ),
+      ),
+      child: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(24),
+          child: Text(
+            'The issue on the last task is most apparent '
+            'the *first time* you visit it, so get ready with DevTools.',
+            style: Theme.of(context).textTheme.headline6.apply(color: Colors.white),
+          ),
+        ),
       ),
     );
   }

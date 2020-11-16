@@ -36,6 +36,7 @@ class MyHomePage extends StatelessWidget {
           _Separator2Page(),
           Task3Page(),
           _Separator1Page(),
+          Task4Warning(),
           _Separator2Page(),
           Task4Page(),
         ],
