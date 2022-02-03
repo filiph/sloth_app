@@ -15,10 +15,12 @@ class _PinkPageState extends State<PinkPage> {
       color: Colors.pink,
       child: Column(
         children: <Widget>[
-          FlatButton(
+          TextButton(
             onPressed: _startComputation,
             child: Text('COMPUTE', style: TextStyle(color: Colors.white)),
-            color: Colors.pink,
+            style: ButtonStyle(
+                backgroundColor:
+                    MaterialStateColor.resolveWith((_) => Colors.pink)),
           ),
           SizedBox(height: 100),
           Text('Result'),

@@ -30,7 +30,7 @@ class ItemLine extends StatelessWidget {
                   padding: const EdgeInsets.only(top: 16),
                   child: Text(
                     name,
-                    style: Theme.of(context).textTheme.body2,
+                    style: Theme.of(context).textTheme.bodyText1,
                   ),
                 ),
                 SizedBox(height: 8),
